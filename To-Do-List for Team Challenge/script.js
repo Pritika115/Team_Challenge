@@ -41,3 +41,11 @@ function createTaskElement(text) {
     li.appendChild(delBtn);
     return li;
 }
+
+function clearAllTasks() {
+    if (confirm("Are you sure you want to clear all tasks?")) {
+        taskList.innerHTML = "";
+        saveTasks();
+        status.textContent = "All tasks cleared.";
+    }
+}
